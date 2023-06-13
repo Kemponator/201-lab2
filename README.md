@@ -5,6 +5,7 @@
 Strings can be placed in single or double quote marks. You can have quotes within the string, as long as it doesn't match the quotes surrounding the string.
 
 2. List 4 types of JavaScript operators.
+
 - string operators
 - arithmetic operators
 - scomparison operators
@@ -19,7 +20,7 @@ I could create a fuction to change an input of years into dog years (*7)
 
 ### Making decisions in your Code - Conditionals
 
-1. An 'if' statement checks a __condition__ and if it evaluates to __true__, then the code block will execute.
+1. An `if` statement checks a __condition__ and if it evaluates to __true__, then the code block will execute.
 
 2. What is the use of an 'else if'?
 
@@ -33,4 +34,4 @@ It provides you with further choices for the condition to be compared to.
 
 4. What is the difference between the logical operator '&&' and '||'?
 
-The operater `&&` means two conditions need to be met, whereas `||` can means either one of the other condition can be met.
+The operater `&&` means two conditions need to be met, whereas `||` can mean either one or the other condition can be met.
