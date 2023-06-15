@@ -160,6 +160,8 @@ function guessNumber() {
 // change the number variable to use Math.floor and Math.random to generate a random number.
 // declare a variable named guessNum and set the value to parseInt(guess)
 
+guessNumber();
+
 function guessNumber() {
   // const number = "7";
   const number = Math.floor(Math.random() * 10 + 1);
@@ -193,9 +195,9 @@ function guessNumber() {
   }
 }
 
-guessNumber();
-
 function guessFood() {
+  alert("Let's guess my favourite places to eat!");
+
   const answerFood = [
     "Benedicts",
     "Haggle",
@@ -208,40 +210,40 @@ function guessFood() {
     "Roger Hickman's",
     "Don Txoko",
   ];
-  console.log(answerFood);
 
   for (let i = 5; i >= 0; i--) {
-    let guesses = i + 1;
+    let winner = false;
+    console.log(winner);
 
-    let guessFoodPlace = prompt(
-      "Can you name one of my favourite places to eat in Norwich? You have " +
-        guesses +
-        " attempts"
-    ).toLowerCase();
-    console.log(i);
-  }
+    let attempts = i + 1;
 
-  if (
-    guessFoodPlace == "Benedicts" ||
-    guessFoodPlace == "Haggle" ||
-    guessFoodPlace == "Trattoria Rustica" ||
-    guessFoodPlace == "Shiki" ||
-    guessFoodPlace == "Kimchi" ||
-    guessFoodPlace == "Dhaba at Fifteen" ||
-    guessFoodPlace == "Namaste Village" ||
-    guessFoodPlace == "The Belgian Monk" ||
-    guessFoodPlace == "Roger Hickman's" ||
-    guessFoodPlace == "Don Txoko"
-  ) {
-    alert("Well done, you guessed correct!");
-  } else {
-    alert("Incorrect - have another go!");
+    let restaurantGuess = prompt(
+      "Can you name one of my Top Ten places to eat?\nYou have " +
+        attempts +
+        " tries left"
+    ).toLowerCase;
 
-    if (i === 0) {
-      alert("Sorry, you've run out of guesses! The answers were " + answerFood);
+    for (let j = 0; j < guessFood.length; j++) {
+      if (guessFood[j].toLowerCase() == restaurantGuess) {
+        console.log("You win!");
+        alert("Well done " + guessFood[j] + " is a correct answer!");
+        winner = !winner;
+        console.log(winner);
+        break;
+      }
     }
-    console.log(guesses);
+
+    if (!winner) {
+      alert("Oh no! " + guessFood + " is not a correct answer!");
+    }
+
+    if (i == 0 || winner == true) {
+      alert("My Top Ten restaurants are " + guessFood);
+      break;
+    }
   }
 }
 
-guessFood();
+function myFunc() {
+  guessFood();
+}
